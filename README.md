@@ -127,4 +127,3 @@ NEXT_PUBLIC_SOCKET_URL=http://localhost:5000
 Run `npm run dev` and open `http://localhost:3000`.
 
 ---
-*Developed for BN_TASK2*

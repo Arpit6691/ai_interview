@@ -19,7 +19,7 @@ import {
   Radio
 } from 'lucide-react';
 
-const SOCKET_SERVER = typeof window !== 'undefined' ? `http://${window.location.hostname}:5000` : 'http://localhost:5000';
+const SOCKET_SERVER = process.env.NEXT_PUBLIC_SOCKET_URL || (typeof window !== 'undefined' ? `http://${window.location.hostname}:5000` : 'http://localhost:5000');
 
 // Fallback Sandbox Interview Templates
 const SANDBOX_INTERVIEW = {

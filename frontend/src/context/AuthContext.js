@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const AuthContext = createContext();
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? `http://${window.location.hostname}:5000/api` : 'http://localhost:5000/api');
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);

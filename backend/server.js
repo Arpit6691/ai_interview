@@ -26,7 +26,7 @@ connectDB();
 
 // CORS options
 const corsOptions = {
-  origin: process.env.CLIENT_URL || '*',
+  origin: process.env.CLIENT_URL || true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -63,7 +63,7 @@ app.use((err, req, res, next) => {
 // Setup Socket.io
 const io = socketio(server, {
   cors: {
-    origin: process.env.CLIENT_URL || '*',
+    origin: process.env.CLIENT_URL || true,
     methods: ['GET', 'POST']
   }
 });
